@@ -1,0 +1,140 @@
+header {
+    height: 107vh;
+    padding-top: 1rem;
+    overflow: hidden;
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+
+
+/* PLUS */
+.plus {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* SIDE */
+.side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.side::after {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+/* IMAGE */
+.logo {
+    /*background: linear-gradient(var(--color-primary), transparent);*/
+    /*background: linear-gradient(10deg, transparent, var(--color-primary), transparent);*/
+
+    background-image: radial-gradient(var(--color-bg) 10%, var(--color-primary) 60%, transparent 70%);
+    /*
+    background: var(--color-bg-variant);
+    background-image: url(../../assets/idvmark.png);
+    background-position-y: center; 
+    background-position-x: center;
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    */
+
+    width: 22rem;
+    height: 22rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 3rem;
+    overflow: hidden;
+    border-radius: 50%;
+    /*border-radius: 6rem 6rem 6rem 6rem;*/
+    padding: 0.7rem 0.2rem 0.2rem 0.2rem;
+}
+
+/* SCROLL */
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.idv__logo__show {
+    width: 10rem;
+    height: 3rem; 
+    position: fixed;
+    top: calc(100% - 9.5rem);
+    left: calc(50% - 4.5rem);
+    z-index: 3;
+    opacity: 100%;
+}
+
+.idv__logo__hide {
+    width: 10rem;
+    height: 3rem; 
+    position: fixed;
+    top: calc(100% - 9.5rem);
+    left: calc(50% - 4.5rem);
+    z-index:10;
+    opacity: 30%;
+}
+
+.logo__chinese {
+    width: 8rem;
+    height: 5rem;
+    margin-top: 1.5rem;
+}
+
+.logo__naeu {
+    width: 8rem;
+    height: 5rem;
+    margin-top: 1.5rem;
+    position: relative;
+    left: calc(100% - 8rem);
+    top: -6rem;
+    margin-bottom: -3rem;
+}
+
+
+/*@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+}*/
+
+@media screen and (max-width: 600px) {
+    /*header {
+        height: 100vh;
+    }*/
+
+    .side, .scroll__down {
+        display: none;
+    }
+
+    .logo__chinese {
+        width: 6rem;
+        height: 3rem;
+        margin-top: 0rem;
+    }
+
+    .logo__naeu {
+        width: 6rem;
+        height: 6rem;
+        margin-top: 3rem;
+        left: calc(100% - 6.5rem);
+    }
+}
