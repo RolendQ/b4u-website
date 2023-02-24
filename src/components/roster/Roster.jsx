@@ -4,6 +4,7 @@ import {FaHandsHelping} from 'react-icons/fa'
 import {MdHealthAndSafety} from 'react-icons/md'
 import {GiWalkingBoot} from 'react-icons/gi'
 import {FaWrench} from 'react-icons/fa'
+import {FaBook} from 'react-icons/fa'
 import {GiDaemonSkull} from 'react-icons/gi'
 
 const Roster = () => {
@@ -45,10 +46,10 @@ const Roster = () => {
                   </div>
               </article>
               <article className="roster__details">
-                  <FaHandsHelping className="roster__details-icon"/>
+                  <FaBook className="roster__details-icon"/>
                   <div>
-                    <h4>KitKatz</h4>
-                    <small className='text-light'>Support</small>
+                    <h4>Aron</h4>
+                    <small className='text-light'>Coach</small>
                   </div>
               </article>
           </div>
@@ -66,14 +67,14 @@ const Roster = () => {
             <article className="roster__details">
                 <GiDaemonSkull className="roster__details-icon"/>
                 <div>
-                    <h4>Qing</h4>
+                    <h4>Qing (ACT)</h4>
                     <small className='text-light'>Hunter</small>
                 </div>
             </article>
             <article className="roster__details">
                 <GiDaemonSkull className="roster__details-icon"/>
                 <div>
-                    <h4>Pitstoppers</h4>
+                    <h4>Pitstopers</h4>
                     <small className='text-light'>Hunter</small>
                 </div>
             </article>

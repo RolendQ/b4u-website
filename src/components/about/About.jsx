@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import TEAM from '../../assets/team1.png'
+import TEAM from '../../assets/team2.jpg'
 import {FaAward} from 'react-icons/fa'
 import {RiEarthFill} from 'react-icons/ri'
 import {FaFlagUsa} from 'react-icons/fa'
@@ -33,12 +33,12 @@ const About = () => {
             <article className="about__card">
               <RiEarthFill className="about__icon"/>
               <h5>International</h5>
-              <small>COA IV & V as NA-EU</small>
+              <small>COA IV, V, & VI as NA-EU</small>
             </article>
             <article className="about__card">
               <FaFlagUsa className="about__icon"/>
               <h5>Regional</h5>
-              <small>4 Wins in NA-EU</small>
+              <small>5 Wins in NA-EU</small>
             </article>
           </div>
 
@@ -51,7 +51,7 @@ const About = () => {
           </button>
           {isOpen && <Modal setIsOpen={setIsOpen} />}
 
-          <a href="#contact" className="btn btn-primary">Contact Us</a>
+          <a href="#contact" className="about__contact">Contact Us</a>
         </div>
       </div>
     </section>

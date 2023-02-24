@@ -7,6 +7,7 @@ import IDVLOGO from '../../assets/IdentityVWhite.png'
 import CLOGO from '../../assets/idvchineselogo.png'
 import NAEU from '../../assets/naeu.png'
 import { useWindowScrollPositions } from '../../index.js'
+import videoBg from '../../assets/team_intro.mov'
 
 const Header = () => {
   const { scrollX, scrollY } = useWindowScrollPositions();
@@ -15,6 +16,8 @@ const Header = () => {
 
   return (
     <header>
+      <div className="header__overlay"></div>
+      <video className="header__bgvideo" src={videoBg} autoPlay loop muted />
       <div className="container header__container">
         <div className="logo__chinese">
           <img src={CLOGO} alt="IDV Logo Chinese" className='idv__logo__chinese' />
@@ -28,9 +31,9 @@ const Header = () => {
         <HeaderPlus />
         <HeaderSide />
 
-        <div className="logo">
+        {/*<div className="logo">
           <img src={LOGO} alt="B4U Logo" />
-        </div>
+        </div>*/}
 
         <a href="#about" className='scroll__down'>Scroll Down</a>
       

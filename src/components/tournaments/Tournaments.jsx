@@ -15,7 +15,15 @@ const Tournaments = () => {
         <div className="container tournaments__container">
             <article className='tournaments__item'>
                 <div className='tournaments__item-image'>
-                    <img src={IMG1} alt="Tournament 1"/>
+                    <img src={IMG1} alt="COA V Globals"/>
+                </div>
+                <h3>COA V Globals</h3>
+                    <small>Played on Apr 16th, 2022</small>
+                    <a href="https://www.youtube.com/watch?v=zzDJ8o7GexY" className='btn btn-primary' target="_blank">Watch</a>
+            </article>
+            <article className='tournaments__item'>
+                <div className='tournaments__item-image'>
+                    <img src={IMG1} alt="COA V NA-EU Qualifiers"/>
                 </div>
                 <h3>COA V NA-EU Qualifiers</h3>
                     <small>Played on Feb 18th, 2022</small>
@@ -23,7 +31,7 @@ const Tournaments = () => {
             </article>
             <article className='tournaments__item'>
                 <div className='tournaments__item-image'>
-                    <img src={IMG2} alt="Tournament 2"/>
+                    <img src={IMG2} alt="IVT NA-EU 2021 (Fall)"/>
                 </div>
                 <h3>IVT NA-EU 2021 (Fall)</h3>
                     <small>Played on Nov 5th, 2021</small>
@@ -31,7 +39,7 @@ const Tournaments = () => {
             </article>
             <article className='tournaments__item'>
                 <div className='tournaments__item-image'>
-                    <img src={IMG3} alt="Tournament 3"/>
+                    <img src={IMG3} alt="COA IV Globals Round 1"/>
                 </div>
                 <h3>COA IV Globals Round 1</h3>
                     <small>Played on May 1st, 2021</small>
@@ -39,7 +47,7 @@ const Tournaments = () => {
             </article>
             <article className='tournaments__item'>
                 <div className='tournaments__item-image'>
-                    <img src={IMG4} alt="Tournament 4"/>
+                    <img src={IMG4} alt="COA IV NA-EU Qualifiers"/>
                 </div>
                 <h3>COA IV NA-EU Qualifiers</h3>
                     <small>Played on Feb 27th, 2021</small>
@@ -47,7 +55,7 @@ const Tournaments = () => {
             </article>
             <article className='tournaments__item'>
                 <div className='tournaments__item-image'>
-                    <img src={IMG5} alt="Tournament 5"/>
+                    <img src={IMG5} alt="Summer NA-EU 2020"/>
                 </div>
                 <h3>Summer NA-EU 2020</h3>
                     <small>Played on Jul 12th, 2020</small>
