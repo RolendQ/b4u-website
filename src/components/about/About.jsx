@@ -11,7 +11,7 @@ import { useState } from 'react'
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isFront, setIsFront] = useState(true);
-  const flipTimer = {};
+  let flipTimer = {};
   const onClickImg = () => {
     clearTimeout(flipTimer);
     setIsFront(!isFront);

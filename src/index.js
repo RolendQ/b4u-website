@@ -1,5 +1,3 @@
-import { createRoot } from 'react-dom/client';
-import App from './App';
 import './index.css';
 
 import { useEffect, useState } from 'react'
@@ -21,6 +19,3 @@ export const useWindowScrollPositions = () => {
 
    return scrollPosition
 }
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
