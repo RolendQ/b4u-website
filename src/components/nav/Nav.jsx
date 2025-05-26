@@ -1,4 +1,3 @@
-import React from 'react'
 import './nav.css'
 import { useWindowScrollPositions } from '../../index.js'
 import {AiOutlineHome} from 'react-icons/ai'

@@ -1,7 +1,9 @@
 .container.players__container {
     width: 70%;
-    padding-bottom: 4rem;
-    height: 80vh;
+    padding-bottom: 0rem;
+    height: fit-content;
+    max-height: none; /* In case window height is too large */
+    background: linear-gradient(45deg, transparent, var(--color-bg-variant), transparent);
 }
 
 .player__avatar {
@@ -24,16 +26,22 @@
 }*/
 
 .player {
-    background: linear-gradient(45deg, transparent, var(--color-bg-variant), transparent);
+    /*background: linear-gradient(45deg, transparent, var(--color-bg-variant), transparent);*/
     /*background: var(--color-bg-variant);*/
+    background-repeat: no-repeat;
+    background-size: 43%;
+    background-position: 50% 50%;
     text-align: center;
-    padding: 2rem;
+    padding: 0rem;
     border-radius: 2rem;
     user-select: none;
 }
 
 .player__name {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+    text-align: left;
+    margin-left: 3rem;
 }
 
 .player__info {
@@ -41,15 +49,37 @@
     font-weight: 300;
     display: block;
     width: 90%;
-    margin: 1rem auto 0 auto;
+    height: 13rem;
+    margin: 1rem auto 3rem auto;
+    font-size: 1.2rem;
+    background-color: rgba(0,0,0,0.6);
 }
 
 .player__socials {
     font-size: 1.5rem;
+    margin-left: 5rem;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    gap: 1rem;
+    margin-top: 12%;
+}
+
+.player__badges {
+    margin-top: 2%;
+    display: flex;
     gap: 0.5rem;
-    margin-top: 0.5rem;
+    justify-content: right;
+    margin-right: 1rem;
+}
+
+.player__badge {
+    width: 4vw;
+    height: 4vw;
+
+}
+
+.swiper-pagination {
+
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -58,26 +88,103 @@
     height: 1rem;
 }
 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0,0,0,0);
+}
+
 @media screen and (max-width: 1024px) {
+    .player {
+        background-position: 50% 0%;
+    }
+
     .container.players__container {
-        width: 80%;
-        height: 90vh; /* May need to adjust based on text length */
+        width: var(--container-width-sm);
+        height: fit-content;
+        max-height: none;
+    }
+    
+    .player__info {
+        width: var(--container-width-sm);
+        margin-top: 45vh;
+        height: 17rem;
+        font-size: 1.1rem;
+    }
+
+    .player__name {
+        float: left;
+        padding-left: 5vw;
+        font-size: 2.2rem;
+    }
+
+    .player__badges {
+        float: right;
+        padding-right: 0vw;
+    }
+
+    .player__badge {
+        width: 6vw;
+        height: 6vw;
+    }
+
+
+    .player__socials {
+        font-size: 1.4rem;
+        margin-left: 10vw;
+        position: fixed;
+
+    }
+
+    .swiper-button-next::after, .swiper-button-prev::after {
+        position: absolute;
+        margin-top: -25vh;
     }
 }
 
 @media screen and (max-width: 600px) {
     .container.players__container {
         width: var(--container-width-sm);
-        height: 100vh;
+        height: fit-content;
+        max-height: none;
+    }
+
+    .player {
+        background-size: 43%;
     }
     
     .player__info {
         width: var(--container-width-sm);
+        margin-top: 16rem;
+        height: 21rem;
+        font-size: 1rem;
+    }
+
+    .player__name {
+        float: left;
+        padding-left: 0rem;
+        font-size: 2rem;
+        padding-right: 20rem;
     }
 
     .player__socials {
-        font-size: 2rem;
-        gap: 1rem;
+        font-size: 1.5rem;
+        margin-left: 8vw;
+        margin-top: 12vh;
+        position: fixed;
+    }
+
+    .swiper-button-next::after, .swiper-button-prev::after {
+        position: absolute;
+        margin-top: -50vh;
+    }
+
+    .player__badge {
+        width: 10vw;
+        height: 10vw;
+        margin-top: 5rem;
     }
 }
 

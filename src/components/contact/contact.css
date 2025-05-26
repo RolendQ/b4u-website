@@ -61,7 +61,7 @@ input, textarea {
     padding: 0.5rem 0.5rem;
     /*background-color: var(--color-primary-variant);*/
     background: linear-gradient(0deg, transparent, var(--color-primary-variant), transparent);
-    z-index: 10;
+    z-index: 2;
 }
 
 @media screen and (max-width: 1024px) {

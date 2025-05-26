@@ -1,6 +1,6 @@
-import React from 'react'
 import './about.css'
-import TEAM from '../../assets/team2.jpg'
+import TEAM_FRONT from '../../assets/coa8_rvl_team_en.jpg'
+import TEAM_BACK from '../../assets/coa8_rvl_bumper.png'
 import {FaAward} from 'react-icons/fa'
 import {RiEarthFill} from 'react-icons/ri'
 import {FaFlagUsa} from 'react-icons/fa'
@@ -10,6 +10,16 @@ import { useState } from 'react'
 
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFront, setIsFront] = useState(true);
+  const flipTimer = {};
+  const onClickImg = () => {
+    clearTimeout(flipTimer);
+    setIsFront(!isFront);
+  };
+  const onMouseImg = () => {
+    clearTimeout(flipTimer);
+    flipTimer = setTimeout(() => {setIsFront(!isFront)},600);
+  };
 
   return (
     <section id='about'>
@@ -18,8 +28,15 @@ const About = () => {
 
       <div className="container about__container">
         <div className="about__us">
-          <div className="about__us-image">
-            <img src={TEAM} alt="Our Team"></img>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div className="flip-card-front">
+                <img src={TEAM_FRONT} alt="Our Team"></img>
+              </div>
+              <div className="flip-card-back">
+                <img src={TEAM_BACK} alt="Our Team 2"></img>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -32,18 +49,19 @@ const About = () => {
             </article>
             <article className="about__card">
               <RiEarthFill className="about__icon"/>
-              <h5>International</h5>
-              <small>COA IV, V, & VI as NA-EU</small>
+              <h5>International Players</h5>
+              <small>COA IV ('21) - COA VIII ('25)</small>
             </article>
             <article className="about__card">
               <FaFlagUsa className="about__icon"/>
-              <h5>Regional</h5>
-              <small>5 Wins in NA-EU</small>
+              <h5>Regional Champs</h5>
+              <small>10 Wins in NA-EU</small>
             </article>
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur dignissimos, impedit sed nesciunt quis dicta quos repudiandae incidunt ratione excepturi praesentium saepe consequatur maiores culpa repellat ea inventore recusandae eos.
+           Before You (B4U prev. RVL) is a competitive Identity V esports team based in the United States.
+It was created in April 2020 by team captain Schmiddy. The current roster also includes MyLeg, Rolend, Sprintzer, Green, Anton, and Aron. After five years, the team has won numerous regional tournaments and represented the North America-Europe region in the Call of the Abyss Global Finals all five times. 
           </p>
 
           <button className='modal__btn' onClick={() => setIsOpen(true)}>

@@ -1,4 +1,3 @@
-import React from 'react'
 import './contact.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {BsYoutube} from 'react-icons/bs'

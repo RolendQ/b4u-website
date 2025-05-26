@@ -1,7 +1,5 @@
-import React from 'react'
 import './header.css'
 import HeaderPlus from './HeaderPlus'
-import LOGO from '../../assets/logo.png'
 import HeaderSide from './HeaderSide'
 import IDVLOGO from '../../assets/IdentityVWhite.png'
 import CLOGO from '../../assets/idvchineselogo.png'
@@ -25,15 +23,11 @@ const Header = () => {
         <div className="logo__naeu">
           <img src={NAEU} alt="NAEU Logo" className='idv__naeu' />
         </div>
-        <h5>B4U</h5>
+        <h5>Identity V NA-EU Team</h5>
         <h1>Before You</h1>
-        <h5 className="text-light">Identity V Team</h5>
+        <h5 className="text-light">(previously RVL)</h5>
         <HeaderPlus />
         <HeaderSide />
-
-        {/*<div className="logo">
-          <img src={LOGO} alt="B4U Logo" />
-        </div>*/}
 
         <a href="#about" className='scroll__down'>Scroll Down</a>
       

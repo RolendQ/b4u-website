@@ -1,66 +1,71 @@
-import React from 'react'
 import './tournaments.css'
-import IMG1 from '../../assets/tourney1.jpg'
-import IMG2 from '../../assets/tourney2.jpg'
-import IMG3 from '../../assets/tourney3.jpg'
-import IMG4 from '../../assets/tourney4.jpg'
-import IMG5 from '../../assets/tourney5.jpg'
+import thumbnail1 from '../../assets/coa8_fan.jpg'
+import thumbnail2 from '../../assets/coa8_bumper.jpg'
+import thumbnail3 from '../../assets/coa6_smores.jpg'
+import thumbnail4 from '../../assets/coa8_group.jpg'
+import thumbnail5 from '../../assets/coa8_qualifiers.jpg'
+import thumbnail6 from '../../assets/ivs2024.jpg'
+
+const data = [
+  {
+    thumbnail: thumbnail1,
+    title: 'Team Fan Edit',
+    date: 'May 20th 2025',
+    link: 'https://www.youtube.com/watch?v=P_eKAgJTZN4',
+  },
+  {
+    thumbnail: thumbnail2,
+    title: 'Team Promotion Clip',
+    date: 'April 11th 2025',
+    link: 'https://www.youtube.com/watch?v=cqJrqfvcX28&pp=ygUVaWRlbnRpdHkgdiBiZWZvcmUgeW91',
+  },
+  {
+    thumbnail: thumbnail3,
+    title: 'Team Community Video',
+    date: 'April 14th 2023',
+    link: 'https://www.youtube.com/watch?v=08HfFp2-RfM',
+  },
+  {
+    thumbnail: thumbnail4,
+    title: 'COA VIII Globals Match',
+    date: 'April 12th 2025',
+    link: 'https://www.youtube.com/live/NXWR2UlUjMA?si=5gcOdg39uuScGdUr&t=21979',
+  },
+  {
+    thumbnail: thumbnail5,
+    title: 'COA VIII NA-EU Qualifiers',
+    date: 'February 22nd 2025',
+    link: 'https://www.youtube.com/live/HfuxclMIe9U?si=_ACEQ-vLskNQmA3K&t=2988',
+  },
+{
+    thumbnail: thumbnail6,
+    title: 'Identity V Stellaris 2024',
+    date: 'September 25th 2024',
+    link: 'https://www.youtube.com/live/_DwjtoLHZUk?si=vW90-kSduFouOK5l&t=2934',
+  },
+]
 
 const Tournaments = () => {
   return (
     <section id='tournaments'>
-        <h5>Our Tournaments</h5>
-        <h2>YouTube VODs</h2>
+        <h5>Team Content</h5>
+        <h2>YouTube Videos</h2>
 
         <div className="container tournaments__container">
-            <article className='tournaments__item'>
-                <div className='tournaments__item-image'>
-                    <img src={IMG1} alt="COA V Globals"/>
-                </div>
-                <h3>COA V Globals</h3>
-                    <small>Played on Apr 16th, 2022</small>
-                    <a href="https://www.youtube.com/watch?v=zzDJ8o7GexY" className='btn btn-primary' target="_blank">Watch</a>
-            </article>
-            <article className='tournaments__item'>
-                <div className='tournaments__item-image'>
-                    <img src={IMG1} alt="COA V NA-EU Qualifiers"/>
-                </div>
-                <h3>COA V NA-EU Qualifiers</h3>
-                    <small>Played on Feb 18th, 2022</small>
-                    <a href="https://www.youtube.com/watch?v=ZDUfGkC2z-Q" className='btn btn-primary' target="_blank">Watch</a>
-            </article>
-            <article className='tournaments__item'>
-                <div className='tournaments__item-image'>
-                    <img src={IMG2} alt="IVT NA-EU 2021 (Fall)"/>
-                </div>
-                <h3>IVT NA-EU 2021 (Fall)</h3>
-                    <small>Played on Nov 5th, 2021</small>
-                    <a href="https://www.youtube.com/watch?v=O6yBcOGrpzg" className='btn btn-primary' target="_blank">Watch</a>
-            </article>
-            <article className='tournaments__item'>
-                <div className='tournaments__item-image'>
-                    <img src={IMG3} alt="COA IV Globals Round 1"/>
-                </div>
-                <h3>COA IV Globals Round 1</h3>
-                    <small>Played on May 1st, 2021</small>
-                    <a href="https://www.youtube.com/watch?v=EJ_-E-fVlNA" className='btn btn-primary' target="_blank">Watch</a>
-            </article>
-            <article className='tournaments__item'>
-                <div className='tournaments__item-image'>
-                    <img src={IMG4} alt="COA IV NA-EU Qualifiers"/>
-                </div>
-                <h3>COA IV NA-EU Qualifiers</h3>
-                    <small>Played on Feb 27th, 2021</small>
-                    <a href="https://www.youtube.com/watch?v=co5eiPWXXbg" className='btn btn-primary' target="_blank">Watch</a>
-            </article>
-            <article className='tournaments__item'>
-                <div className='tournaments__item-image'>
-                    <img src={IMG5} alt="Summer NA-EU 2020"/>
-                </div>
-                <h3>Summer NA-EU 2020</h3>
-                    <small>Played on Jul 12th, 2020</small>
-                    <a href="https://www.youtube.com/watch?v=j4yuOA6F4tk" className='btn btn-primary' target="_blank">Watch</a>
-            </article>
+            {
+              data.map(({thumbnail, title, date, link}, index) => {
+                return (
+                    <article key={index} className='tournaments__item'>
+                        <div className='tournaments__item-image'>
+                            <img src={thumbnail} alt={title}/>
+                        </div>
+                        <h3>{title}</h3>
+                            <small>Uploaded on {date}</small>
+                            <a href={link} className='btn btn-primary' target="_blank">Watch</a>
+                    </article>
+                )
+              })
+            }
         </div>
     </section>
   )

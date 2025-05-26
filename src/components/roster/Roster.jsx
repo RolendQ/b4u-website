@@ -1,4 +1,3 @@
-import React from 'react'
 import './roster.css'
 import {FaHandsHelping} from 'react-icons/fa'
 import {MdHealthAndSafety} from 'react-icons/md'
@@ -28,55 +27,58 @@ const Roster = () => {
                   <FaHandsHelping className="roster__details-icon"/>
                   <div>
                     <h4>Schmiddy</h4>
-                    <small className='text-light'>Support</small>
+                    <small className='text-light'>Kiter & Support</small>
                   </div>
               </article>
               <article className="roster__details">
                   <GiWalkingBoot className="roster__details-icon"/>
                   <div>
-                    <h4>Paulblems</h4>
-                    <small className='text-light'>Kiter</small>
+                    <h4>Green</h4>
+                    <small className='text-light'>Kiter & Support</small>
                   </div>
               </article>
               <article className="roster__details">
                   <FaWrench className="roster__details-icon"/>
                   <div>
                     <h4>MyLeg</h4>
-                    <small className='text-light'>Decoder</small>
+                    <small className='text-light'>Kiter</small>
                   </div>
               </article>
               <article className="roster__details">
-                  <FaBook className="roster__details-icon"/>
+                  <GiWalkingBoot className="roster__details-icon"/>
                   <div>
-                    <h4>Aron</h4>
-                    <small className='text-light'>Coach</small>
+                    <h4>YinL</h4>
+                    <small className='text-light'>Kiter</small>
                   </div>
               </article>
           </div>
         </div>
         <div className="roster__hunters">
-          <h3 className='faction'>Hunters</h3>
+          <h3 className='faction'>Hunter & Coaches</h3>
           <div className="roster__content">
             <article className="roster__details">
-                <GiDaemonSkull className="roster__details-icon"/>
-                <div>
-                    <h4>Sprintzer</h4>
-                    <small className='text-light'>Hunter</small>
-                </div>
+              <GiDaemonSkull className="roster__details-icon"/>
+              <div>
+                  <h4>Sprintzer</h4>
+                  <small className='text-light'>Hunter</small>
+              </div>
             </article>
             <article className="roster__details">
-                <GiDaemonSkull className="roster__details-icon"/>
-                <div>
-                    <h4>Qing (ACT)</h4>
-                    <small className='text-light'>Hunter</small>
-                </div>
+              <FaBook className="roster__details-icon"/>
+              <div>
+                <h4>Aron</h4>
+                <small className='text-light'>Coach</small>
+              </div>
             </article>
             <article className="roster__details">
-                <GiDaemonSkull className="roster__details-icon"/>
-                <div>
-                    <h4>Pitstopers</h4>
-                    <small className='text-light'>Hunter</small>
-                </div>
+              
+              </article>
+            <article className="roster__details">
+              <FaBook className="roster__details-icon"/>
+              <div>
+                <h4>Anton</h4>
+                <small className='text-light'>Coach</small>
+              </div>
             </article>
           </div>
 

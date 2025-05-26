@@ -1,5 +1,3 @@
-import React from 'react'
-
 const HeaderPlus = () => {
   return (
     <div className='plus'>
